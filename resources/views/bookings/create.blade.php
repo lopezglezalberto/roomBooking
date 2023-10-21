@@ -63,7 +63,7 @@
             entities: false
         });
 
-        /*$('#id_room, #arrival_date, #departure_date').change(function(){
+        $('#id_room, #arrival_date, #departure_date').change(function(){
 
            $.ajax({
                 type: 'POST',
@@ -117,7 +117,7 @@
                 }
 
             });
-        });*/
+        });
 
         $('#get_available').click(function (e) {
 
@@ -141,10 +141,6 @@
 
                     if ($.isEmptyObject(data.errors)) {
 
-                        /*var newOption = new Option(data.result.text, data.result.id, false, false);
-
-                        $('#id_room').append(newOption).trigger('change');*/
-
                         $("#id_room").empty();
 
                         for(var i=0; i < data.result.length; i++){
@@ -157,6 +153,30 @@
                             placeholder: "Select the room...",
                             allowClear: true
                         });
+
+                        if($.isEmptyObject(data.result)){
+
+                            $(function () {
+
+                                new PNotify({
+                                    title: "Error!",
+                                    text: "No available rooms found",
+                                    type: 'error',
+                                    sound: true
+                                });
+                            });
+                        } else {
+
+                            $(function () {
+
+                                new PNotify({
+                                    title: "Success!",
+                                    text: "Available rooms found",
+                                    type: 'success',
+                                    sound: true
+                                });
+                            });
+                        }
 
                     } else {
 
