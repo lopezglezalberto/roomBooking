@@ -220,21 +220,17 @@ class BookingController extends AppBaseController
                 'amount' => $total_amount
             ];
 
-
             try {
                 \Illuminate\Support\Facades\Mail::to($input['email'])->queue(new NotificationClient($message));
                 \Illuminate\Support\Facades\Mail::to('bookingshotel@gmail.com')->queue(new NotificationHotel($message));
 
-                return 1;
-
             } catch (\Exception $e) {
-                return 0;
             }
 
 
             \Cache::flush();
-            \Cache::put('message', '<b style="color: black">Se ha registrado la recepcici&oacute;n del Banco de Sangre:  satisfactoriamente.</b>', 20);
-            \Cache::put('title', '<b style="color: black">Operaci&oacute;n realizada</b>', 20);
+            \Cache::put('message', '<b style="color: black">Booking made successfully.</b>', 20);
+            \Cache::put('title', '<b style="color: black">Success</b>', 20);
             \Cache::put('type', 'success', 20);
 
             return response()->json(['days' => 1]);
