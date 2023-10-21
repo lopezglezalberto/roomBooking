@@ -1,0 +1,25 @@
+/* please use this file for your own styles
+ * it's need for easiest update of newest wersions
+*/
+
+@Font-face {
+    font-family: mifont;
+    src: url(../fonts/mifont.ttf) format('truetype');
+}
+
+.myfont {
+    font-family: mifont;
+    font-size: 150%;
+    line-height: normal;
+}
+
+/*
+.fondo {
+    background: url("../images/fondo/pluma mano.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.1;
+}
+*/
