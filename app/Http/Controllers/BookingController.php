@@ -47,7 +47,6 @@ class BookingController extends AppBaseController
         return view('bookings.create', compact('rooms'));
     }
 
-
     public function get_available(Request $request){
 
         $input = request()->all();
@@ -62,7 +61,8 @@ class BookingController extends AppBaseController
 
             'arrival_date.required' => 'This field is required',
             'departure_date.required' => 'This field is required',
-            'departure_date.verification_date' => 'It cannot be longer than the arrival date',
+            'departure_date.verification_date' => 'The departure date cannot be equal to or prior to the arrival date.',
+
         );
 
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -70,21 +70,32 @@ class BookingController extends AppBaseController
         if ($validator->passes()) {
 
             $rooms = Rooms::whereNotExists(
-                                function ($query) {
-                                    $query->select(DB::raw(1))
-                                        ->from('bookings')
-                                        ->whereRaw('bookings.rooms_id = rooms.id');
-                                })->get();
+                            function ($query) {
+                                $query->select(DB::raw(1))
+                                    ->from('bookings')
+                                    ->whereRaw('bookings.rooms_id = rooms.id')
+                                    ->whereDate('bookings.departure_date','>=' , '2023-10-21')
+                                    ->whereDate('bookings.arrival_date','<=', '2023-10-28');
+                            })->get();
 
-            $success = [
-                'title' => 'Success',
-                'message' => 'Successful search'
-            ];
+            $result = [];
 
+            if($rooms){
 
-            return response()->json(['success' => $success]);
+                foreach($rooms as $room){
+
+                    $datos = [
+
+                        'id' => $room->id,
+                        'text' => $room->name,
+                    ];
+
+                    $result [] = $datos;
+                }
+            }
+
+            return response()->json(['result' => $result/*$details*/]);
         }
-
         return response()->json([
             'success' => false,
             'errors' => $validator->getMessageBag()->toArray(),
@@ -176,7 +187,6 @@ class BookingController extends AppBaseController
             'email.required' => 'This field is required',
             'email.email' => 'Email format required',
             'phone.required' => 'This field is required',
-
         );
 
         $validator = Validator::make($request->all(), $rules, $messages);

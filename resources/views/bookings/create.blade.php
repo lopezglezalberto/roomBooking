@@ -63,7 +63,7 @@
             entities: false
         });
 
-        $('#id_room, #arrival_date, #departure_date').change(function(){
+        /*$('#id_room, #arrival_date, #departure_date').change(function(){
 
            $.ajax({
                 type: 'POST',
@@ -117,9 +117,11 @@
                 }
 
             });
-        });
+        });*/
 
         $('#get_available').click(function (e) {
+
+            $('#box_content').hide();
 
             $.ajax({
                 type: 'POST',
@@ -139,17 +141,21 @@
 
                     if ($.isEmptyObject(data.errors)) {
 
-                        var newOption = new Option(data.datos.text, data.datos.id, false, false);
-                        $('#id_room').append(newOption).trigger('change');
+                        /*var newOption = new Option(data.result.text, data.result.id, false, false);
 
-                        $(function () {
+                        $('#id_room').append(newOption).trigger('change');*/
 
-                            new PNotify({
-                                title: data.success.title,
-                                text: data.success.message,
-                                type: 'success',
-                                sound: true
-                            });
+                        $("#id_room").empty();
+
+                        for(var i=0; i < data.result.length; i++){
+                            $('#id_room').append('<option value="'+ data.result[i].id +'">'+ data.result[i].text +'</option>');
+                        }
+
+                        $('.select2_room').val('');
+
+                        $(".select2_room").select2({
+                            placeholder: "Select the room...",
+                            allowClear: true
                         });
 
                     } else {

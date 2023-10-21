@@ -35,3 +35,27 @@ Route::resource('rooms', 'RoomsController');
 Route::resource('bookings', 'BookingController');
 Route::post('get_data_room', 'BookingController@get_data_room')->name('bookings.get_data_room');
 Route::post('get_available', 'BookingController@get_available')->name('bookings.get_available');
+
+
+Route::get('/fecha', function () {
+
+    $rooms_no_avaible = \App\Models\Booking::whereDate('departure_date','>=' , '2023-10-21')
+                                            ->whereDate('arrival_date','<=', '2023-10-28')->get();
+
+
+
+
+
+    $rooms = \App\Models\Rooms::whereNotExists(
+                        function ($query) {
+                            $query->select(DB::raw(1))
+                                ->from('bookings')
+                                ->whereRaw('bookings.rooms_id = rooms.id')
+                                ->whereDate('bookings.departure_date','>=' , '2023-10-21')
+                                ->whereDate('bookings.arrival_date','<=', '2023-10-28');
+                        })->get();
+
+    return $rooms;
+
+})->name('fecha');
+
