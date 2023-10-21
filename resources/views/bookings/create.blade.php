@@ -141,11 +141,14 @@
 
                     if ($.isEmptyObject(data.errors)) {
 
+                        console.log(data.result);
+
                         $("#id_room").empty();
 
                         for(var i=0; i < data.result.length; i++){
                             $('#id_room').append('<option value="'+ data.result[i].id +'">'+ data.result[i].text +'</option>');
                         }
+
 
                         $('.select2_room').val('');
 

@@ -82,6 +82,14 @@ class BookingController extends AppBaseController
 
             if($rooms){
 
+                $datos = [
+
+                    'id' => '',
+                    'text' => 'Select the room...',
+                ];
+
+                $result [] = $datos;
+
                 foreach($rooms as $room){
 
                     $datos = [

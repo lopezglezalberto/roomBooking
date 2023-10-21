@@ -35,13 +35,13 @@
       <file leaf-file-name="BookingController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BookingController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.307693">
-              <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state vertical-scroll-proportion="-23.73077">
+              <caret line="104" column="56" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="56" />
               <folding>
                 <element signature="e#40#83#0#PHP" expanded="true" />
                 <element signature="e#819#1170#0#PHP" expanded="false" />
-                <marker date="1697898450434" expanded="true" signature="7557:7569" placeholder="..." />
-                <marker date="1697898450434" expanded="true" signature="7653:7665" placeholder="..." />
+                <marker date="1697899050087" expanded="true" signature="7727:7739" placeholder="..." />
+                <marker date="1697899050087" expanded="true" signature="7823:7835" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -72,8 +72,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/bookings/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2228844">
-              <caret line="119" column="11" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.37187126">
+              <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -82,8 +82,8 @@
       <file leaf-file-name="fields.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/bookings/fields.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="28" column="56" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -121,8 +121,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" />
         <option value="$PROJECT_DIR$/resources/views/bookings/fields.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BookingController.php" />
         <option value="$PROJECT_DIR$/resources/views/bookings/create.blade.php" />
       </list>
     </option>
@@ -512,8 +512,8 @@
           <folding>
             <element signature="e#40#83#0#PHP" expanded="true" />
             <element signature="e#819#1170#0#PHP" expanded="false" />
-            <marker date="1697898450434" expanded="true" signature="7557:7569" placeholder="..." />
-            <marker date="1697898450434" expanded="true" signature="7653:7665" placeholder="..." />
+            <marker date="1697899050087" expanded="true" signature="7727:7739" placeholder="..." />
+            <marker date="1697899050087" expanded="true" signature="7823:7835" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -885,33 +885,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BookingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.307693">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#83#0#PHP" expanded="true" />
-            <element signature="e#819#1170#0#PHP" expanded="false" />
-            <marker date="1697898450434" expanded="true" signature="7557:7569" placeholder="..." />
-            <marker date="1697898450434" expanded="true" signature="7653:7665" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bookings/fields.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BookingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.73077">
+          <caret line="104" column="56" selection-start-line="104" selection-start-column="49" selection-end-line="104" selection-end-column="56" />
+          <folding>
+            <element signature="e#40#83#0#PHP" expanded="true" />
+            <element signature="e#819#1170#0#PHP" expanded="false" />
+            <marker date="1697899050087" expanded="true" signature="7727:7739" placeholder="..." />
+            <marker date="1697899050087" expanded="true" signature="7823:7835" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bookings/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2228844">
-          <caret line="119" column="11" selection-start-line="119" selection-start-column="11" selection-end-line="119" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.37187126">
+          <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
           <folding />
         </state>
       </provider>
